@@ -1,0 +1,17 @@
+FROM python:2.7.11-wheezy
+MAINTAINER Marco Riello riellomarco@gmail.com
+
+RUN apt-get update
+RUN apt-get update -q
+RUN apt-get install -qy texlive-full
+RUN apt-get install -qy python-pygments
+RUN apt-get install -qy ghostscript
+
+RUN pip install --upgrade pip
+RUN pip install astropy
+RUN pip install matplotlib
+RUN adduser --uid 1000 --disabled-password --gecos '' mriello
+
+USER mriello
+WORKDIR /code
+CMD ["bash"]
