@@ -1,0 +1,11 @@
+FROM python:2.7-alpine
+MAINTAINER Marco Riello riellomarco@gmail.com
+LABEL version="1.0"
+
+RUN pip install --upgrade pip
+RUN pip install tweepy
+
+RUN adduser -u 1000 -D -g '' mriello
+USER mriello
+WORKDIR /tweepy
+CMD ["python"]
