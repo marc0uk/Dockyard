@@ -10,6 +10,12 @@ image with the additions listed below. This should allow running most of astroph
   * astropy
   * matplotlib
 
+To run the image as a throw-away container with the ability of saving data from the current working directory:
+
+```
+docker run --rm -it -e LOCAL_USER_ID=`id -u $USER` -v `pwd`:/code marc0uk/pydev
+```
+
 ## `Dockerfile.tweepy.dev` Development tweepy image
 
 This image provides a throw-away python environment to play with Twitter interaction via [Tweepy](http://www.tweepy.org/).
