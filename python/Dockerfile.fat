@@ -8,8 +8,7 @@ RUN apt-get install -qy python-pygments
 RUN apt-get install -qy ghostscript
 
 RUN pip install --upgrade pip
-RUN pip install astropy
-RUN pip install matplotlib
+RUN pip install astropy matplotlib emcee
 RUN adduser --uid 1000 --disabled-password --gecos '' mriello
 
 USER mriello
