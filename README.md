@@ -1,5 +1,5 @@
 # Dockyard
-`Dockerfile`s I use for work, developement and fun.
+`Dockerfile`s I use for work, development and fun.
 
 ## Useful images to be based on
 
